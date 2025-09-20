@@ -14,10 +14,8 @@ if __name__ == '__main__':
     for i in word:
         print('_', end=' ')
     print()
-    playing = True
     chances = len(word) + 2
     letterguessed = ''
-    correct =0 
     flag =0
     try:
         while chances>0 and flag == 0:
@@ -47,7 +45,6 @@ if __name__ == '__main__':
             for char in word:
                 if char in letterguessed and (Counter(letterguessed) != Counter(word)):
                     print(char, end=' ')
-                    correct += 1
                 elif Counter(letterguessed) == Counter(word):
                     print("You have guessed the word correctly! It is: ", word)
                     flag =1
